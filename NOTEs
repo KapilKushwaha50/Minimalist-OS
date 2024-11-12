@@ -1,0 +1,5 @@
+    for app_name, time_spent in usage_data.items():
+        time_in_minutes = time_spent // 60  # Convert seconds to minutes
+        time_in_seconds = time_spent - time_in_minutes
+        app_label = tk.Label(stats_window, text=f"{app_name}: {time_in_minutes} min {time_in_seconds} sec", bg="black", fg="white", font=("Helvetica", 12))
+        app_label.pack(pady=5)
